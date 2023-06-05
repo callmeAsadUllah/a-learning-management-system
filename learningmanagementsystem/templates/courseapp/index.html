@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+a Learning Management System
+{% endblock title %}
+
+{% block content %}
+<h1>
+    aLMS
+</h1>
+{% if request.user.is_authenticated %}
+<h1>
+    {{ request.user.email }} | {{ request.user.is_admin as 'admin'}}
+</h1>
+{% endif %}
+{% endblock content %}
